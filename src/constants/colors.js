@@ -1,0 +1,12 @@
+const COLORS = {
+    background: '#F0F9FF',
+    cardBg: '#FFFFF',
+    primary: '#0284c7',
+    secondary: '#38BDF8',
+    textMain: '#0C4A6E',
+    textMuted: '#64748B',
+    danger: '#EF4444'
+  };
+
+
+
