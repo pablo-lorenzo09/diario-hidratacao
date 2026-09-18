@@ -22,7 +22,11 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
-
+      <SafeAreaView>
+        <Header/>
+        <WaterProgress/>
+        <ActionButtons/>
+      </SafeAreaView>   
     </SafeAreaProvider>
   );
 }
