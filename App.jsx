@@ -25,10 +25,16 @@ export default function App() {
       <SafeAreaView>
         <StatusBar barStyle={'auto'}/>
         <View>
-         <Header/>
+         <Header GOAL={GOAL}/>
         </View>
       </SafeAreaView>   
     </SafeAreaProvider>
   );
 }
 
+// const styles = StyleSheet.create({
+//   header: {
+//    justifyContent: 'center',
+//   },
+// })
+// nao ta pegando a centralizaçao
