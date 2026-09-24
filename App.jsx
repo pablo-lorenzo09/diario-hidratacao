@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, View, StatusBar } from 'react-native';
+import { StyleSheet, View, StatusBar, Text } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS } from './src/constants/colors';
 import { Header } from './src/components/Header';
@@ -23,10 +23,12 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView>
-        <Header/>
-        <WaterProgress/>
-        <ActionButtons/>
+        <StatusBar barStyle={'auto'}/>
+        <View>
+         <Header/>
+        </View>
       </SafeAreaView>   
     </SafeAreaProvider>
   );
 }
+

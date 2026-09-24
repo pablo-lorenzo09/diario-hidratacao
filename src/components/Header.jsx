@@ -3,9 +3,8 @@ import { View, Text } from 'react-native';
 export function Header() {
     return(
           <View>
-                <Text>
-                    Oi eu sou o Header
-                </Text>
+                <Text>Hidratação APP</Text>
+                <Text>Meta Diária 2000ml</Text>
             </View>
     )
 };
