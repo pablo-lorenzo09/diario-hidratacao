@@ -13,11 +13,11 @@ export default function App() {
   // Função para acumular a quantidade ingerida
 
   const handleAddWater = (amount) => {
-
+    setConsumed(consumed + amount);
   };
 
   const handleReset = () =>{
-
+    setConsumed(0);
   };
 
   return (
@@ -26,7 +26,8 @@ export default function App() {
         <StatusBar barStyle={'auto'}/>
         <View>
          <Header GOAL={GOAL}/>
-         <WaterProgress consumed={2000} goal={GOAL}/>
+         <WaterProgress consumed={consumed} goal={GOAL}/>
+         <ActionButtons/>
         </View>
       </SafeAreaView>   
     </SafeAreaProvider>

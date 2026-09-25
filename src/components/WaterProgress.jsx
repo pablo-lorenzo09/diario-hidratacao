@@ -6,9 +6,9 @@ export function WaterProgress({ consumed, goal }) {
     const porcentagem = Math.min(((consumed / goal) * 100), 100)
 
     return (
-        <View>
-            <Text>Você bebeu {consumed}ml de água hoje.</Text>
-            <Text>Você atingiu {porcentagem}% da meta diária.</Text>
+        <View style={styles.card}>
+            <Text style={styles.consumedText}>Você bebeu {consumed}ml de água hoje.</Text>
+            <Text style={styles.percentageText}>Você atingiu {porcentagem}% da meta diária.</Text>
             <View style={styles.progressBarBackground}>
                 <View style={[styles.progressBarFill, { width: `${porcentagem}%` }]} />
             </View>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     },
     progressBarBackground: {
         width: '100%',
-        height: 25,
+        height: 13,
         backgroundColor: '#00090f',
         borderRadius: 6,
         overflow: 'hidden',
