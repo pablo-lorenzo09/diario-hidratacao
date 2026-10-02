@@ -1,20 +1,22 @@
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { COLORS } from '../constants/colors';
 
-export function AjustarMeta() {
+export function AjustarMeta({ addGoal, GOAL}) {
 
     return (
         <View>
             <View style={styles.container}>
                 <Text style={styles.subtitle}>Ajustar Meta Diária:</Text>
                 <View style={styles.buttonRow}>
-                    <Pressable style={styles.button}>
+                    <Pressable style={styles.button} onPress={() => addGoal(-250)}>
                         <Text style={styles.buttonText}>
                             -250ml
                         </Text>       
                     </Pressable>
-                    <Text style={styles.title}>1000 ml</Text>
-                    <Pressable style={styles.button}>
+
+                    <Text style={styles.title}>{GOAL} ml</Text>
+
+                    <Pressable style={styles.button} onPress={() => addGoal(250)}>
                         <Text style={styles.buttonText}>
                             +250ml
                         </Text> 

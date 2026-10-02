@@ -8,8 +8,8 @@ import { ActionButtons } from './src/components/ActionButtons';
 import { AjustarMeta } from './src/components/AjustarMeta';
 
 export default function App() {
-  const GOAL = 2000; // Meta diária em ml
   const [consumed, setConsumed] = useState(0);
+  const [GOAL, setGOAL] = useState(2000);
 
   // Função para acumular a quantidade ingerida
 
@@ -21,13 +21,17 @@ export default function App() {
     setConsumed(0);
   };
 
+  const addGoal = (amount) => {
+    setGOAL(GOAL + amount)
+  };
+
   return (
     <SafeAreaProvider>
       <SafeAreaView>
         <StatusBar barStyle={'auto'} />
         <View>
           <Header GOAL={GOAL} />
-          <AjustarMeta />
+          <AjustarMeta addGoal={addGoal} GOAL={GOAL}/>
           <WaterProgress consumed={consumed} goal={GOAL} />
           <ActionButtons onAdd={handleAddWater} onReset={handleReset}/>
         </View>
