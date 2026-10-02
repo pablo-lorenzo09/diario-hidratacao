@@ -18,7 +18,10 @@ export function DicaSaude() {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        backgroundColor:,
+        marginTop: 5,
+        backgroundColor: 'yellow',
+        borderRadius: 10,
+        padding: 15,
     },
     title: {
     

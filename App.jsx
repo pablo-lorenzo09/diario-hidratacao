@@ -33,7 +33,7 @@ export default function App() {
     <SafeAreaProvider>
       <SafeAreaView>
         <StatusBar barStyle={'auto'} />
-        <View>
+        <View style={styles.container}>
           <Header GOAL={GOAL} />
           <AjustarMeta addGoal={addGoal} GOAL={GOAL}/>
           <WaterProgress consumed={consumed} goal={GOAL} />
@@ -48,7 +48,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    margin: 5,
   },
   content: {
     flex: 1,
