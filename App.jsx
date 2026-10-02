@@ -30,8 +30,8 @@ export default function App() {
   };
 
   return (
-    <SafeAreaProvider>
-      <SafeAreaView>
+    <SafeAreaProvider >
+      <SafeAreaView >
         <StatusBar barStyle={'auto'} />
         <View style={styles.container}>
           <Header GOAL={GOAL} />

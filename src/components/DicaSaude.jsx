@@ -5,11 +5,20 @@ export function DicaSaude() {
 
     return (
         <View>
+            
             <View style={styles.container}>
-                <Text>Dica de Saúde</Text>
-                <Text>
-                    Beber água regularmente melhora a concentração, a digestão e mantém a sua energia alta ao longo do dia!
+
+                <Text style={styles.icone}>
+                    💡
                 </Text>
+                <View >
+                    <Text style={styles.text}>Dica de Saúde</Text>
+
+                    <Text style={styles.containerText}>
+                        Beber água regularmente melhora a concentração, a digestão e mantém a sua energia alta ao longo do dia!
+                    </Text>
+                </View>
+                
             </View>
         </View>
     )
@@ -17,13 +26,22 @@ export function DicaSaude() {
 
 const styles = StyleSheet.create({
     container: {
+        flex:1,
         width: '100%',
         marginTop: 5,
         backgroundColor: 'yellow',
         borderRadius: 10,
-        padding: 15,
+        paddingHorizontal: 30,
+        flexDirection: 'row',
+
+        justifyContent: 'center',
+        height: 300,
     },
-    title: {
-    
+    text: {
+        textAlignVertical:'center',
+    },
+    icone: {
+        fontSize: 25,
+        textAlignVertical:'center',
     },
 })
