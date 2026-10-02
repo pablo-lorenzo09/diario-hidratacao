@@ -16,20 +16,20 @@ export default function App() {
     setConsumed(consumed + amount);
   };
 
-  const handleReset = () =>{
+  const handleReset = () => {
     setConsumed(0);
   };
 
   return (
     <SafeAreaProvider>
       <SafeAreaView>
-        <StatusBar barStyle={'auto'}/>
+        <StatusBar barStyle={'auto'} />
         <View>
-         <Header GOAL={GOAL}/>
-         <WaterProgress consumed={consumed} goal={GOAL}/>
-         <ActionButtons/>
+          <Header GOAL={GOAL} />
+          <WaterProgress consumed={consumed} goal={GOAL} />
+          <ActionButtons onAdd={handleAddWater} onReset={handleReset}/>
         </View>
-      </SafeAreaView>   
+      </SafeAreaView>
     </SafeAreaProvider>
   );
 }
