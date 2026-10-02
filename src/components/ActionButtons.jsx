@@ -23,7 +23,7 @@ export function ActionButtons({ onAdd, onReset }) {
                         </Pressable>
                     </View>
 
-                        <Pressable onPress={funcao} style={styles.resetButton}>
+                        <Pressable style={styles.resetButton} onPress={onReset}>
                             <Text style={styles.resetButtonText}>Reiniciar Dia</Text>
                         </Pressable>
                     
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: COLORS.white,
+    color: COLORS.cardBg,
     fontWeight: 'bold',
     fontSize: 14,
   },
