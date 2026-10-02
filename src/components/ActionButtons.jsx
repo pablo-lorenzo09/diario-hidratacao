@@ -1,7 +1,7 @@
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { COLORS } from '../constants/colors';
 
-export function ActionButtons(funcao) {
+export function ActionButtons({ onAdd, onReset }) {
 
     return(
             <View>
@@ -10,18 +10,22 @@ export function ActionButtons(funcao) {
                         Adicionar consumo:
                     </Text>
                     <View style={styles.buttonRow}>
-                        <Pressable onPress={funcao} style={styles.button}>
+                        <Pressable style={styles.button} onPress={() => onAdd(200)}>
                             <Text style={styles.buttonText}>+200 ml</Text>
                         </Pressable>
 
-                        <Pressable onPress={funcao} style={styles.button}>
+                        <Pressable style={styles.button} onPress={() => onAdd(350)}>
                             <Text style={styles.buttonText}>+350 ml</Text>
                         </Pressable>
 
-                        <Pressable onPress={funcao} style={styles.button}>
+                        <Pressable style={styles.button} onPress={() => onAdd(500)}>
                             <Text style={styles.buttonText}>+500 ml</Text>
                         </Pressable>
                     </View>
+
+                        <Pressable onPress={funcao} style={styles.resetButton}>
+                            <Text style={styles.resetButtonText}>Reiniciar Dia</Text>
+                        </Pressable>
                     
                 </View>
                 
