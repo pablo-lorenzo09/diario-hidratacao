@@ -5,6 +5,7 @@ import { COLORS } from './src/constants/colors';
 import { Header } from './src/components/Header';
 import { WaterProgress } from './src/components/WaterProgress';
 import { ActionButtons } from './src/components/ActionButtons';
+import { AjustarMeta } from './src/components/AjustarMeta';
 
 export default function App() {
   const GOAL = 2000; // Meta diária em ml
@@ -26,6 +27,7 @@ export default function App() {
         <StatusBar barStyle={'auto'} />
         <View>
           <Header GOAL={GOAL} />
+          <AjustarMeta />
           <WaterProgress consumed={consumed} goal={GOAL} />
           <ActionButtons onAdd={handleAddWater} onReset={handleReset}/>
         </View>

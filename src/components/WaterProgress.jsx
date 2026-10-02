@@ -7,7 +7,7 @@ export function WaterProgress({ consumed, goal }) {
 
     return (
         <View style={styles.card}>
-            <Text style={styles.consumedText}>Você bebeu {consumed}ml de água hoje.</Text>
+            <Text style={styles.consumedText}>{consumed} ml</Text>
             <Text style={styles.percentageText}>Você atingiu {porcentagem}% da meta diária.</Text>
             <View style={styles.progressBarBackground}>
                 <View style={[styles.progressBarFill, { width: `${porcentagem}%` }]} />
