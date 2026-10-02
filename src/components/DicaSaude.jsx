@@ -17,6 +17,7 @@ export function DicaSaude() {
     </View>
   </View>
 );
+
 }
 const styles = StyleSheet.create({
   screenContainer: {
