@@ -22,7 +22,8 @@ export default function App() {
   };
 
   const addGoal = (amount) => {
-    setGOAL(GOAL + amount)
+    setGOAL(Math.max((GOAL + amount), 500))
+
   };
 
   return (
